@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.require_version ">= 2.1.0
+Vagrant.require_version ">= 2.1.0"
 
 show_logo = false
 red="\033[38;5;9m"#124m"
