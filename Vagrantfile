@@ -3,17 +3,9 @@
 
 Vagrant.require_version ">= 2.1.0"
 
-
-# whitelist when we show the logo, else it'll show on global Vagrant commands
-if [ 'up', 'halt', 'resume', 'suspend', 'status', 'provision', 'reload' ].include? ARGV[0] then
-  show_logo = true
-end
-
-if show_logo then
-
-splash = <<-HEREDOC
+$msg = <<MSG
 ------------------------------------------------------
-Elephant Eleanor,accessible at http://192.168.33.10
+Elephant Eleanor, accessible at http://192.168.33.10
 
 Wordpress:
  - wordpress url  - http://junglewp.local/
@@ -21,7 +13,7 @@ Wordpress:
  - login          - admin
  - Password       - password
  ------------------------------------------------------
-Database:
+ Database:
  - Database       - junglewp
  - Username       - root
  - Password       - root
@@ -33,13 +25,8 @@ Database:
  |  ___  \_/\---'         \/ || \/       \|  \ |/ 
  |_||  |_||                |_''_|         |_||_| 
 
-                         Hello, You !                    
- ------------------------------------------------------
-
-HEREDOC
-
-puts splash
-end
+------------------------------------------------------
+MSG
 
 
 
