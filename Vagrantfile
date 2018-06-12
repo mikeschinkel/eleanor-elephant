@@ -19,21 +19,21 @@ end
 
 if show_logo then
 
-$msg = <<MSG
-#{red}------------------------------------------------------
-#{yellow}Elephant Eleanor, #{blue}accessible at #{url}http://192.168.33.10
+splash = <<-HEREDOC
+#{yellow}------------------------------------------------------
+#{green}Elephant Eleanor,accessible at #{url}http://192.168.33.10
 
-#{green}Wordpress:
- - #{purple}wordpress url  - #{url}http://junglewp.local/
- - #{purple}directory      - #{green}var/www/public
- - #{purple}login          - #{green}admin
- - #{purple}Password       - #{green}password
+Wordpress:
+ - wordpress url  - #{green}http://junglewp.local/
+ - directory      - #{green}var/www/public
+ - login          - #{green}admin
+ - Password       - #{green}password
  #{yellow}------------------------------------------------------
- #{green}Database:
- - #{purple}Database       - #{green}junglewp
- - #{purple}Username       - #{green}root
- - #{purple}Password       - #{green}root
- - #{purple}Host           - #{green}localhost
+Database:
+ - Database       - #{green}junglewp
+ - Username       - #{green}root
+ - Password       - #{green}root
+ - Host           - #{green}localhost
 
            _                 
    ______/ \-.   _         _ __ _         _    _  
@@ -41,9 +41,10 @@ $msg = <<MSG
  |  ___  \_/\---'         \/ || \/       \|  \ |/ 
  |_||  |_||                |_''_|         |_||_| 
 
-#{red}------------------------------------------------------
-MSG
+#{yellow}------------------------------------------------------
+HEREDOC
 
+puts splash
 end
 
 
