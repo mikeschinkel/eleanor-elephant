@@ -90,11 +90,12 @@ This tool installs a WordPress environment with these settings by default.
 * Database: junglewp
 
 ## SSH
-Host: junglewp.local or 192.168.33.10
-Username: vagrant
-Password: vagrant
-Port: 2222
-You can login virtual machine with
+* Host: junglewp.local or 192.168.33.10
+* Username: vagrant
+* Password: vagrant
+* Port: 2222
+* You can login virtual machine with
+
 ``` vagrant ssh ```
 
 # UPDATING Eleanor Elephant
@@ -108,7 +109,7 @@ It will tell you if you are running the latest version or not of the bpod. If it
                             
 
                         
-Follow us on GitHub and Twitter for the latest updates to Eleanor Elephant `@jungle_wp`.
+Follow us on GitHub and Twitter for the latest updates to Eleanor Elephant [@jungle_wp](https://twitter.com/jungle_wp).
 
 ![JungleWP Limited](https://junglewp-60af.kxcdn.com/wp-content/uploads/2017/10/logo.png "junglewp.com")
 

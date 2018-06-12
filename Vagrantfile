@@ -8,8 +8,8 @@ Elephant Eleanor, accessible at http://192.168.33.10
 Wordpress:
  - wordpress url  - http://junglewp.local/
  - directory      - var/www/public
- - login          - eleanor
- - Password       - elephAnt&4u
+ - login          - admin
+ - Password       - password
  ------------------------------------------------------
  Database:
  - Database       - junglewp
@@ -33,7 +33,7 @@ config.vm.post_up_message = $msg
 
     config.vm.box = "junglewp/eleanor-elephant"
     config.vm.box_version = "1.0"
-    config.vm.provision :shell, path: "/provision/bootstrap.sh"
+    config.vm.provision :shell, path: "bootstrap.sh"
 
     config.vm.hostname = "junglewp.local"
 
