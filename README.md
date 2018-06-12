@@ -107,6 +107,30 @@ It will tell you if you are running the latest version or not of the bpod. If it
                            
 ``` vagrant box update ```
                             
+# BASIC VAGRANT COMMANDS
+
+
+## PAUSE YOUR SERVER
+
+You should do this before shutting down your computer.
+                                        
+```vagrant suspend```
+
+                                        
+## RESUME YOUR SERVER
+                                            
+``` vagrant up ```
+                                       
+
+## DELETE YOUR SERVER
+                                                
+``` vagrant destroy ```
+                                           
+
+## SSH INTO YOUR SERVER
+                                                    
+``` vagrant ssh ```
+
 
                         
 Follow us on GitHub and Twitter for the latest updates to Eleanor Elephant [@jungle_wp](https://twitter.com/jungle_wp).
