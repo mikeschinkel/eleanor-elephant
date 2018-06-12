@@ -19,13 +19,31 @@ Wordpress:
  - Password       - root
  - Host           - localhost
 
-           _                 
-   ______/ \-.   _         _ __ _         _    _  
-.-/     (    o\_//        / |..| \       / >--< \ 
- |  ___  \_/\---'         \/ || \/       \|  \ |/ 
- |_||  |_||                |_''_|         |_||_| 
 
-------------------------------------------------------
+                         _____
+         .-~---..._--~~~~     ~~~~---..__
+        /       .  ~~-._                 ~-.
+       /            .   |                   Y
+       |        .       |                    \
+       |  O        .   .|                     K
+       |         .   . /                      |\
+       /       Y       |                      | \_
+      (   ( /  |.  .  /                       | ()\   .-~~-.-~-.___
+      (   |/-^.\     |             :          j  \ \ /    /    Y   ~~-.
+      /  /     \\___/    :          :        ."   | || o       !       \
+     (  )       `\       j           :       |    \ \j         |        k
+     (  )        |      /_        ___.Y      :     \__.   |   /         j\
+     j  j        /    ."  ~~---~~~ /   \     \         ~~\\__/   :      !
+  __/  /        /    / \    ".    /    .`\    ".         /".   Y__Y   ."\
+  >__.~        |    |   `\    \  |    /   `\    \       /  /\  |  (  /\  \
+               [nn  ]     [nn  ] [nn  ]     [nn  ]     [n ] [n ]  [n ] [n ]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JungleWP Limited - https://junglewp.com                    Eleanor Elephant
+
+Thank you for using JungleWP.com vagrant Eleanor Elephant.
+We built this vagrant box with a lot of caffeine ❤, If you like our work, please shout-out
+a word on Twitter @jungle_wp #wordpress #saveelephants. Remember, we love you!
+
 MSG
 
 
