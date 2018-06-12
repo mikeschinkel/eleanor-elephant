@@ -19,26 +19,7 @@ Wordpress:
  - Password       - root
  - Host           - localhost
 
-
-                         _____
-         .-~---..._--~~~~     ~~~~---..__
-        /       .  ~~-._                 ~-.
-       /            .   |                   Y
-       |        .       |                    \
-       |  O        .   .|                     K
-       |         .   . /                      |\
-       /       Y       |                      | \_
-      (   ( /  |.  .  /                       | ()\   .-~~-.-~-.___
-      (   |/-^.\     |             :          j  \ \ /    /    Y   ~~-.
-      /  /     \\___/    :          :        ."   | || o       !       \
-     (  )       `\       j           :       |    \ \j         |        k
-     (  )        |      /_        ___.Y      :     \__.   |   /         j\
-     j  j        /    ."  ~~---~~~ /   \     \         ~~\\__/   :      !
-  __/  /        /    / \    ".    /    .`\    ".         /".   Y__Y   ."\
-  >__.~        |    |   `\    \  |    /   `\    \       /  /\  |  (  /\  \
-               [nn  ]     [nn  ] [nn  ]     [nn  ]     [n ] [n ]  [n ] [n ]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-JungleWP Limited - https://junglewp.com                    Eleanor Elephant
+(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ
 
 Thank you for using JungleWP.com vagrant Eleanor Elephant.
 We built this vagrant box with a lot of caffeine ❤, If you like our work, please shout-out
