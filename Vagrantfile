@@ -1,21 +1,39 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-$msg = <<MSG
-------------------------------------------------------
-Elephant Eleanor, accessible at http://192.168.33.10
+Vagrant.require_version ">= 2.1.0
 
-Wordpress:
- - wordpress url  - http://junglewp.local/
- - directory      - var/www/public
- - login          - admin
- - Password       - password
- ------------------------------------------------------
- Database:
- - Database       - junglewp
- - Username       - root
- - Password       - root
- - Host           - localhost
+show_logo = false
+red="\033[38;5;9m"#124m"
+green="\033[1;38;5;2m"#22m"
+blue="\033[38;5;4m"#33m"
+purple="\033[38;5;5m"#129m"
+yellow="\033[38;5;3m"#136m"
+yellow_underlined="\033[4;38;5;3m"#136m"
+url=yellow_underlined
+
+# whitelist when we show the logo, else it'll show on global Vagrant commands
+if [ 'up', 'halt', 'resume', 'suspend', 'status', 'provision', 'reload' ].include? ARGV[0] then
+  show_logo = true
+end
+
+if show_logo then
+
+$msg = <<MSG
+#{red}------------------------------------------------------
+#{yellow}Elephant Eleanor, #{blue}accessible at #{url}http://192.168.33.10
+
+#{green}Wordpress:
+ - #{purple}wordpress url  - #{url}http://junglewp.local/
+ - #{purple}directory      - #{green}var/www/public
+ - #{purple}login          - #{green}admin
+ - #{purple}Password       - #{green}password
+ #{yellow}------------------------------------------------------
+ #{green}Database:
+ - #{purple}Database       - #{green}junglewp
+ - #{purple}Username       - #{green}root
+ - #{purple}Password       - #{green}root
+ - #{purple}Host           - #{green}localhost
 
            _                 
    ______/ \-.   _         _ __ _         _    _  
@@ -23,8 +41,10 @@ Wordpress:
  |  ___  \_/\---'         \/ || \/       \|  \ |/ 
  |_||  |_||                |_''_|         |_||_| 
 
-------------------------------------------------------
+#{red}------------------------------------------------------
 MSG
+
+end
 
 
 
