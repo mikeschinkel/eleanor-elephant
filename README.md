@@ -205,7 +205,7 @@ Both of the files you created will be placed in the /etc/nginx/ssl directory.
 We have created our key and certificate files under the Nginx configuration directory. Now we just need to modify our Nginx configuration to take advantage of these by adjusting our server block files.
 
 
-``` sudo nano /etc/ngninx/sites-enabled/default ```
+``` sudo nano /etc/nginx/sites-enabled/default ```
 
 Your server block may look something like this:
 
