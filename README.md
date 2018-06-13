@@ -168,6 +168,109 @@ You should do this before shutting down your computer.
 ``` vagrant ssh ```
 
 
+# How To Create an SSL Certificate for WooCommerce & API development
+
+If you need to work with API, or test WooCommerce websites, then you will probably need to have an SSL Certificate installed on your vagrant box. We will show you how to set up a self-signed SSL certificate for use with an Nginx web server on an Eleanor Elephant. A self-signed certificate will not validate the identity of your pod since it is not signed by one of your web browser's trusted certificate authorities, but it will allow you to encrypt communications with your web clients and start working with ssl in an instant.
+
+## Step One — Create the SSL Certificate
+
+We can start off by creating a directory that will be used to hold all of our SSL information. We should create this under the Nginx configuration directory:
+
+``` sudo mkdir /etc/nginx/ssl ```
+
+Now that we have a location to place our files, we can create the SSL key and certificate files in one motion by typing:
+
+``` sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt ```
+
+These options will create both a key file and a certificate. We will be asked a few questions about our server in order to embed the information correctly in the certificate.
+
+Fill out the prompts appropriately. The most important line is the one that requests the Common Name `(e.g. server FQDN or YOUR name)`. You need to enter the domain name that you want to be associated with your server. You can enter the public IP address instead if you do not have a domain name.
+
+The entirety of the prompts will look something like this:
+
+```
+Country Name (2 letter code) [AU]:HK
+State or Province Name (full name) [Some-State]:Hong Kong
+Locality Name (eg, city) []:Hong Kong
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Bouncy Waves, Inc.
+Organizational Unit Name (eg, section) []:Department of Water Slides
+Common Name (e.g. server FQDN or YOUR name) []:junglewp.local
+Email Address []:admin@junglewp.local
+
+```
+Both of the files you created will be placed in the /etc/nginx/ssl directory.
+
+## Step Two — Configure Nginx to Use SSL
+
+We have created our key and certificate files under the Nginx configuration directory. Now we just need to modify our Nginx configuration to take advantage of these by adjusting our server block files.
+
+
+``` sudo nano /etc/ngninx/sites-enabled/default ```
+
+Your server block may look something like this:
+
+```
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
+
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+
+        server_name _;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+```
+
+The only thing we would need to do to get SSL working on this same server block, while still allowing regular HTTP connections, is add a these lines:
+
+```
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
+
+        **listen 443 ssl;**
+
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+
+        server_name _;
+        **ssl_certificate /etc/nginx/ssl/nginx.crt;
+        ssl_certificate_key /etc/nginx/ssl/nginx.key;**
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+```
+
+When you are finished, save and close the file.
+
+Now, all you have to do is restart Nginx to use your new settings:
+
+``` sudo service nginx restart ```
+
+## Step Three — Test SSL
+
+Now, we can check whether our server can use SSL to communicate. Do this by specifying the https protocol instead of the http protocol.
+
+https://junglewp.local
+
+You will likely get a warning in your web browser Nginx SSL warning.
+
+This is expected. It is telling you that it cannot verify the identity of the server you are trying to connect to because it isn't signed by a certificate authority that the browser has been configured to trust. Since we created a self-signed certificate, this makes perfect sense.
+
+Click on "Proceed anyway", "Continue", or whatever similar option is available. You should see your site again.
+
+Your browser may show the "https" crossed out in the address bar or a broken or crossed out "lock" icon. If you click on the lock icon, you can see some more information about the connection.
+
+As you can see, the issue is only that the browser cannot verify the identity of the server because it isn't signed by a certificate authority that it is configured to trust. The middle section shows that the connection is encrypted, however, we have achieved that goal, and SSL is fully activated on Eleanor Elephant.
+
                         
 Follow us on GitHub and Twitter for the latest updates to Eleanor Elephant [@jungle_wp](https://twitter.com/jungle_wp).
 
