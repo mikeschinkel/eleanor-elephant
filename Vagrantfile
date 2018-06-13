@@ -19,11 +19,11 @@ Wordpress:
  - Password       - root
  - Host           - localhost
 
-(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ(づ♥ᴥ♥)づ
+------------------------------------------------------
 
 Thank you for using JungleWP.com vagrant Eleanor Elephant.
 We built this vagrant box with a lot of caffeine ❤, If you like our work, please shout-out
-a word on Twitter @jungle_wp #wordpress #saveelephants. Remember, we love you!
+a word on Twitter @jungle_wp #wordpress #saveelephants. Remember, we love you! \xf0\x9f\x98\x9c
 
 MSG
 
