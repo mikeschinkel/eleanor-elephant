@@ -249,7 +249,7 @@ server {
 
 ```
 
-When you are finished, save and close the file ( press CTRL + X, press Y, then press Enter).
+When you are finished, save and close the file ( press CTRL + X, press SHIFT + Y, then press Enter).
 
 Now, all you have to do is restart Nginx to use your new settings:
 
