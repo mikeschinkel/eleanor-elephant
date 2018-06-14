@@ -7,7 +7,7 @@ $msg = <<MSG
 ------------------------------------------------------
 Elephant Eleanor, accessible at http://192.168.33.10
 
-Wordpress:
+WordPress:
  - wordpress url  - http://junglewp.local/
  - directory      - var/www/public
  - login          - admin
